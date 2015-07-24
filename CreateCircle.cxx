@@ -32,7 +32,7 @@ int main( int argc , char *argv[])
 
   //iterator
   itk::ImageRegionIterator<ImageType> imageIterator(image,region);
-
+  imageIterator.GoToBegin();
   while(!imageIterator.IsAtEnd())
      {
       int xIndex= imageIterator.GetIndex()[0] - size[0]/2;
